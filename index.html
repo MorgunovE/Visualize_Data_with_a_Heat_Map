@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Temperature Heat Map</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #tooltip {
+            position: absolute;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 10;
+        }
+        .cell:hover {
+            stroke: black;
+            stroke-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Monthly Global Land-Surface Temperature</h1>
+        <h3 id="description">1753 - 2015: base temperature 8.66℃</h3>
+        <div id="heat-map"></div>
+    </div>
+    <div id="tooltip"></div>
+    <script src="script.js"></script>
+</body>
+</html>
